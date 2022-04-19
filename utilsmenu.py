@@ -60,15 +60,21 @@ def ip():
 	print('----------')
 	main()
 
+def bomber():
+    clear()
+    print("To exit pres CTRL+C")
+    bomber = os.system("bomber")
+    
+
 def main():
 	print('[1] IP пробив')
-	print('[2] DOS атака(не работает)')
+	print('[2] Запуск SMS-Бомбера')
 	print('[0] Выход')
 	a = input('>>> ')
 	if a == '1':
 		ip()
 	elif a == '2':
-		dos()
+		bomber()
 	elif a == '0':
 		print('Завершение программы...')
 		time.sleep(1)
@@ -77,6 +83,8 @@ def main():
 		print('Неверная команда.')
 		print('----------')
 		main()
+
+
 
 def slowType(text, speed, newLine = True): # Function used to print text a little more fancier
         for i in text: # Loop over the message
